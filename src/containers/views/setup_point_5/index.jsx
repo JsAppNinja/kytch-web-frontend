@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import hero02Image from '../../../shared/img/hero-02.jpg';
+import progressImage from '../../../shared/img/icon-circle-process-gradient-blue-time-128x128-@2x.png';
+import blueLeafImage from '../../../shared/img/icon-circle-gradient-blue-leaf-128x128-@2x.png';
 
 export default () => (
   <main>
@@ -20,13 +22,13 @@ export default () => (
           <ul className="ul-features-with-big-icons list-unstyled">
             <li>
               <div className="item-wrapper">
-                <span className="icon-wrapper"><img src="assets/images/icon-circle-process-gradient-blue-time-128x128-@2x.png" alt=""/></span>
+                <span className="icon-wrapper"><img src={progressImage} alt=""/></span>
                 <span className="text-wrapper">Helps your Kytch products know whether you're working or away.</span> 
               </div>
             </li>
             <li>
               <div className="item-wrapper">
-                <span className="icon-wrapper"><img src="assets/images/icon-circle-gradient-blue-leaf-128x128-@2x.png" alt=""/></span>
+                <span className="icon-wrapper"><img src={blueLeafImage} alt=""/></span>
                 <span className="text-wrapper">Lets your products adjust automatically.</span> 
               </div>
             </li>

@@ -4,7 +4,6 @@ import get from 'lodash.get';
 import { withRouter } from 'react-router-dom';
 // eslint-disable-next-line
 import { hot } from 'react-hot-loader';
-import 'bootstrap/dist/css/bootstrap.css';
 
 import { BasicNotification } from '../../shared/components/Notification';
 
