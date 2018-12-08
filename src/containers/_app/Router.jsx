@@ -14,9 +14,29 @@ import SetupPoint6 from '../views/setup_point_6';
 import SetupPoint7 from '../views/setup_point_7';
 import SetupPoint8 from '../views/setup_point_8';
 
+// Team pages
+
+import TeamStart from '../views/team/start';
+import SetInviteeName from '../views/team/set_invitee_name';
+import SetInviteeEmailAndNote from '../views/team/set_invitee_email_note';
+import AccountList from '../views/team/account_list';
+
+
+const teamRoutes = () => (
+  <Switch>
+    <Route exact path="/team/start" component={TeamStart} />
+    <Route exact path="/team/invitee_name" component={SetInviteeName} />
+    <Route exact path="/team/invitee_email_note" component={SetInviteeEmailAndNote} />
+    <Route exact path="/team/account_list" component={AccountList} />
+    <Route exact path="/team" component={TeamStart} />
+    <Route component={NotFound404} />
+  </Switch>
+);
+
 const wrappedRoutes = () => (
   <Fragment>
     <Switch>
+      <Route path="/team" component={teamRoutes} />
       <Route exact path="/setup_point_0" component={SetupPoint0} />
       <Route exact path="/setup_point_1" component={SetupPoint1} />
       <Route exact path="/setup_point_2" component={SetupPoint2} />
@@ -31,6 +51,7 @@ const wrappedRoutes = () => (
     </Switch>
   </Fragment>
 );
+
 
 export default class Router extends Component {
   static propTypes = {
